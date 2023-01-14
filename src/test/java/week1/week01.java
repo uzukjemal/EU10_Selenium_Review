@@ -1,7 +1,26 @@
 package week1;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
 public class week01 {
+
     public static void main(String[] args) {
-        System.out.println("hello");
+
+
+        WebDriverManager.chromedriver().setup(); //1.step
+        WebDriverManager.edgedriver().setup();
+
+
+        WebDriver driverChrome = new ChromeDriver(); //2. step
+
+        driverChrome.get("https://practice.cydeo.com/");
+
+        WebDriver driverEdge = new EdgeDriver();
+
+        driverEdge.get("https://www.google.com");
+
     }
 }
